@@ -26,12 +26,15 @@ let activePlayer = 0;
 const playerEl0 = document.querySelector('.player--0');
 const playerEl1 = document.querySelector('.player--1');
 let playing = true;
+let getting1 = new Audio('./getting1.mp3');
+let winningSound = new Audio('./winningSound.mp3');
+let bgMusic = new Audio('./bgMusic.mp3');
+bgMusic.play();
 
 btnRollEl.addEventListener('click', function () {
   if (playing) {
     //1.Generate a random number
     const diceNumber = Math.trunc(Math.random() * 6) + 1;
-
     //2.Roll the dice
     diceEl.classList.remove('hidden');
     diceEl.src = `dice-${diceNumber}.png`;
@@ -43,6 +46,7 @@ btnRollEl.addEventListener('click', function () {
         currentScore;
     } else {
       //Switch Player
+      getting1.play();
       document.getElementById(`current--${activePlayer}`).textContent = 0;
       currentScore = 0;
       activePlayer = activePlayer === 0 ? 1 : 0;
@@ -75,6 +79,8 @@ function holdValue() {
 
     //Checking the logic for winner function.
     if (scorePlayer1 >= 100 || scorePlayer0 >= 100) {
+      bgMusic.pause();
+      winningSound.play();
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.toggle('player--active');

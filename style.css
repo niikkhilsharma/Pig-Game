@@ -210,6 +210,16 @@ main {
     width: auto;
   }
 }
+@media screen and (max-width: 1300px) {
+  .rules{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .rules {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 700px) {
   .name {
     font-size: 2rem;
