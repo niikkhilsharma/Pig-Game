@@ -29,7 +29,6 @@ let playing = true;
 let getting1 = new Audio('./getting1.mp3');
 let winningSound = new Audio('./winningSound.mp3');
 let bgMusic = new Audio('./bgMusic.mp3');
-bgMusic.play();
 
 btnRollEl.addEventListener('click', function () {
   if (playing) {
@@ -113,6 +112,7 @@ btnNewEl.addEventListener('click', newGame);
 //Adding close functionality to pop-up rules window
 document.querySelector('.close').addEventListener('click', closeRules);
 function closeRules() {
+  bgMusic.play();
   document.querySelector('.rules').style.display = 'none';
   document.querySelector('main').style.opacity = 1;
 }
