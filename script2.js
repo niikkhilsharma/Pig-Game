@@ -32,6 +32,8 @@ let bgMusic = new Audio('./bgMusic.mp3');
 
 btnRollEl.addEventListener('click', function () {
   if (playing) {
+    //Play the music
+    bgMusic.play();
     //1.Generate a random number
     const diceNumber = Math.trunc(Math.random() * 6) + 1;
     //2.Roll the dice
@@ -94,6 +96,7 @@ function holdValue() {
 }
 //Logic for new game();
 const newGame = function () {
+  bgMusic.play();
   currentScore0.textContent = currentScore1.textContent = 0;
   currentScore = 0;
   scorePlayer0 = scorePlayer1 = 0;
