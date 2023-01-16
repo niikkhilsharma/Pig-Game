@@ -211,7 +211,7 @@ main {
   }
 }
 @media screen and (max-width: 1300px) {
-  .rules{
+  .rules {
     width: 50%;
   }
 }
@@ -230,5 +230,46 @@ main {
   }
   .rules {
     width: 80%;
+  }
+}
+@media screen and (min-width: 510px) and (max-width: 700px) {
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+  }
+  .player {
+    padding: 6rem;
+  }
+  .btn--roll {
+    top: 28.3rem;
+  }
+  .btn--hold {
+    top: 34.1rem;
+  }
+  .btn--new {
+    top: 1rem;
+  }
+  .name {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .player {
+    padding: 2rem;
+  }
+  .btn--new {
+    top: 16rem;
+  }
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+  .btn--roll {
+    top: 34.4rem;
+  }
+  .btn--hold {
+    top: 40rem;
+  }
+  .dice {
+    top: 22.5rem;
   }
 }
