@@ -20,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* LAYOUT */
@@ -191,6 +192,18 @@ main {
   font-size: 16px;
   padding: 10px 10px 10px 10px;
 }
+/* Setting up the footer with by name */
+footer {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+footer p {
+  color: #d2c7c7;
+  font-size: 20px;
+}
+
 /* Making the close button for pop up window */
 .close {
   float: right;
@@ -252,8 +265,11 @@ main {
   .name {
     margin-top: 2rem;
   }
+  footer P {
+    font-size: 15px;
+  }
 }
-@media screen and (min-width: 300px) and (max-width: 500px) {
+@media screen and (min-width: 250px) and (max-width: 500px) {
   .player {
     padding: 2rem;
   }
@@ -261,7 +277,8 @@ main {
     top: 16rem;
   }
   .btn {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.7rem;
+    width: max-content;
   }
   .btn--roll {
     top: 34.4rem;
@@ -272,13 +289,13 @@ main {
   .dice {
     top: 22.5rem;
   }
+  footer p {
+    font-size: 14px;
+  }
 }
-<<<<<<< HEAD
-=======
 @media screen and (min-width: 100px) and (max-width: 400px) {
   .rules {
     width: 85%;
     top: auto;
   }
 }
->>>>>>> a0f0dde (add file)
