@@ -273,3 +273,12 @@ main {
     top: 22.5rem;
   }
 }
+<<<<<<< HEAD
+=======
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  .rules {
+    width: 85%;
+    top: auto;
+  }
+}
+>>>>>>> a0f0dde (add file)
